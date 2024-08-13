@@ -29,9 +29,6 @@
 
     .logo-container {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         z-index: 1;
     }
 
@@ -57,10 +54,14 @@
 }
 
 .story {
+    display: block;
+
     h2, #characters  {
         transform: translateY(0px);
         opacity: 0;
         animation: fadeInUp 1s ease-in-out 0.1s forwards;
+
+        display: block;
     
         &::before {
             left: -100%;
@@ -69,8 +70,31 @@
             height: 155px;
             width: 155px;
             left: -91%;
+            
             animation: rotate 10s linear infinite 1.1s;
         }
+        h3 {
+            text-align: left;
+            background-image: url("../images/orange_characters_bg.png");
+            width: 100%;
+            display: block;
+            background-size: contain; 
+            background-position: left center; 
+            padding: 50px;
+        }
+    }
+    
+    .swiper-container {
+        width: 1440px;
+        height: auto;
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
     }
 
     .story__article {

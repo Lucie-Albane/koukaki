@@ -22,17 +22,41 @@ document.addEventListener('DOMContentLoaded', fadeIn);
 
 /* ---------- PARALLAX HERO HEADER ---------- */
 document.addEventListener('scroll', function() {
-    // récupère la position de défilement
     const scrollPosition = window.scrollY;
     const bannerVideo = document.querySelector('.banner-video');
     const logoContainer = document.querySelector('.logo-container');
 
-    // application de l'effet parallax sur les variables si elles existent
     if (bannerVideo) {
         bannerVideo.style.transform = `translateY(${scrollPosition * 0.1}px)`;
     }
     if (logoContainer) {
-        logoContainer.style.transform = `translate(${scrollPosition * 0.3}px))`;
+        logoContainer.style.transform = `translateY(${scrollPosition * 0.3}px)`;
     }
 });
 /* ---------- FIN DE PARALLAX HERO HEADER ---------- */
+
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+});
