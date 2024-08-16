@@ -28,7 +28,6 @@ get_header();
 
             </article>
         </section>
-        <?php get_template_part('template-parts/characters'); ?>
 
         <section id="studio">
             <h2>Studio Koukaki</h2>
