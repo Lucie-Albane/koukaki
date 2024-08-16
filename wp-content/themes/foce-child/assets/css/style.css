@@ -48,6 +48,9 @@
 .story {
   display: block;
 }
+.story #characters {
+  overflow: hidden;
+}
 .story h2, .story #characters {
   transform: translateY(0px);
   opacity: 0;
@@ -81,6 +84,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.story .swiper-container .swiper-wrapper {
+  width: 1440px;
+}
+.story .swiper-container .swiper-wrapper figure {
+  width: 400px;
 }
 .story .story__article::after {
   transform: translateY(0px);

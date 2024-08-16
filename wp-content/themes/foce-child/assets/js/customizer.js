@@ -41,16 +41,19 @@ document.addEventListener('DOMContentLoaded', function () {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: false,
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 30,
         coverflowEffect: {
             rotate: 0,
             stretch: 0,
-            depth: 200,
+            depth: 70,
             modifier: 1,
             slideShadows: false,
         },
         loop: true,
+        autoplay: {
+            delay: 2000,
+          },
     });
 });
 /* ---------- FIN SWIPER JS POUR LA SECTION PERSONNAGES ---------- */

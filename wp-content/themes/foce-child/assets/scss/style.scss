@@ -56,6 +56,10 @@
 .story {
     display: block;
 
+    #characters {
+        overflow: hidden;
+    }
+
     h2, #characters  {
         transform: translateY(0px);
         opacity: 0;
@@ -93,6 +97,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+        }
+
+        .swiper-wrapper {
+            width: 1440px;
+
+            figure {
+                width: 400px;
+            }
         }
 
     }
