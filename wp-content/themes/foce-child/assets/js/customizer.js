@@ -35,6 +35,7 @@ document.addEventListener('scroll', function() {
 });
 /* ---------- FIN DE PARALLAX HERO HEADER ---------- */
 
+/* ---------- SWIPER JS POUR LA SECTION PERSONNAGES ---------- */
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
@@ -50,13 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
             slideShadows: false,
         },
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
     });
 });
+/* ---------- FIN SWIPER JS POUR LA SECTION PERSONNAGES ---------- */
