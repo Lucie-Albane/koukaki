@@ -58,3 +58,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 /* ---------- FIN SWIPER JS POUR LA SECTION PERSONNAGES ---------- */
+
+/* ---------- PARALLAX LIEU NUAGES ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const cloudsContainer = document.querySelector('.clouds');
+    const clouds = document.querySelectorAll('.cloud');
+
+    function isInView() {
+        // variable pour obtenir les dimensions et la position du conteneur par raport à la fenêtre de visualisation
+        const rect = cloudsContainer.getBoundingClientRect();
+        // vérifie si le conteneur est visible : si le haut du conteneur est inferieur ou égal à la hauteur de la fenetre,
+        // et que le bas du conteneur est supérieur ou égal à 0, c'est qu'il est dans la fenêtre du navigateur
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    function parallaxScroll() {
+        if (isInView()) {
+            const scrollPosition = window.scrollY;
+            // position du conteneur par rapport au haut de la page
+            const containerOffset = cloudsContainer.offsetTop;
+            // hauteur du conteneur
+            const containerHeight = cloudsContainer.offsetHeight;
+            // scroll% = distance entre la position actuelle du scroll et le haut du conteneur / la hauteur du conteneur = la portion scrollée de la hauteur du conteneur
+            // 200px - 50px / 800px = 0,18% scrollé
+            const scrollPercent = (scrollPosition - containerOffset) / containerHeight;
+
+            // translatex sur chaque nuage
+            clouds.forEach((cloud) => {
+                cloud.style.transform = `translateX(-${scrollPercent * 300}px)`;
+            });
+        }
+    }
+
+    window.addEventListener('scroll', parallaxScroll);
+});
+/* ---------- FIN DE PARALLAX LIEU NUAGES ---------- */
+

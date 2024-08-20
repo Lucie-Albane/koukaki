@@ -129,12 +129,42 @@
             position: absolute; 
             width: 100%;
             min-height: 699px;
-            background-image: url("../images/place_bg.png");
+            background-image: url("../images/place_bg_no_clouds.png");
             background-size: cover; 
             background-position: center; 
             opacity: 0;
             animation: fadeInUp 1s ease-in-out 0.1s forwards;
             z-index: -1;
+        }
+        
+        .clouds {
+            flex-direction: row;
+            margin-left: 200px;
+            
+            .parallax-image {
+                position: absolute;
+            }
+            .big-cloud {
+                width: 315px;
+                height: 120px;
+    
+                right: 0;
+                margin-top: 80px;
+
+                filter: blur(10px);
+            }
+    
+            .little-cloud {
+                width: 142px;
+                height: 55px;
+
+                right: 0;
+                margin-top: 230px;
+
+                filter: blur(10px);
+            }
+        }
+        
         }
 
         h3 {
@@ -148,9 +178,8 @@
             transform: translateY(0px); 
             animation: none; 
         }
-
-    }
 }
+
 
 #studio {
    h2 {
