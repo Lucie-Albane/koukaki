@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', fadeIn);
 
 /* ---------- PARALLAX HERO HEADER ---------- */
 document.addEventListener('scroll', function() {
+    // variable stockant la distance en pixels entre le haut de la fenêtre du nav & le haut de la page web = la quantité de contenu scrollé 
     const scrollPosition = window.scrollY;
     const bannerVideo = document.querySelector('.banner-video');
     const logoContainer = document.querySelector('.logo-container');
