@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ---------- FIN SWIPER JS POUR LA SECTION PERSONNAGES ---------- */
 
 /* ---------- PARALLAX LIEU NUAGES ---------- */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const cloudsContainer = document.querySelector('.clouds');
     const clouds = document.querySelectorAll('.cloud');
 
@@ -94,3 +94,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 /* ---------- FIN DE PARALLAX LIEU NUAGES ---------- */
 
+/* ---------- GESTION BURGER MENU ---------- */
+document.addEventListener('DOMContentLoaded', function () {
+    const burgerOpenIcon = document.querySelector('.burger-menu-open-icon');
+    const burgerCloseIcon = document.querySelector('.burger-menu-close-icon');
+    const burger = document.querySelector('.burger-menu');
+    const overlayMenu = document.querySelector('.overlay-menu');
+    const navmenu = document.querySelector('.nav-menu');
+
+    function displayMenu() {
+        burgerCloseIcon.classList.toggle('hidden');
+        burgerOpenIcon.classList.toggle('hidden');
+        overlayMenu.classList.toggle('show');
+    }
+    burger.addEventListener('click', displayMenu);  
+    navmenu.addEventListener('click', displayMenu);
+});
+/* ---------- FIN GESTION BURGER MENU ---------- */
