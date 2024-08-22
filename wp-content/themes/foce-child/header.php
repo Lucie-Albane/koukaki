@@ -27,17 +27,22 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-            <button class="burger-menu" aria-controls="primary-menu" aria-expanded="false">
-                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burger_open.png'; ?>" class="burger-menu-open-icon" alt="icône pour ouvrir et fermer le menu">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burger_close.png'; ?>" class="burger-menu-close-icon hidden" alt="icône pour ouvrir et fermer le menu">
-            </button>
+			<div class="nav-bar">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<button class="burger-menu" aria-controls="primary-menu" aria-expanded="false">
+                	<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burger_open.png'; ?>" class="burger-menu-open-icon" alt="icône pour ouvrir et fermer le menu">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burger_close.png'; ?>" class="burger-menu-close-icon hidden" alt="icône pour ouvrir et fermer le menu">
+            	</button>
+			</div>
 			<div class="overlay-menu">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo de fleurs d'oranger et chats errants">
 				<ul class="nav-menu">
 				<li class="nav-item"><a href="#story">Histoire</a></li>
                 <li class="nav-item"><a href="#characters">Personnages</a></li>
                 <li class="nav-item"><a href="#place">Lieu</a></li>
                 <li class="nav-item"><a href="#studio">Studio Koukaki</a></li>
 				</ul>
+				<p>STUDIO KOUKAKI</p>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
