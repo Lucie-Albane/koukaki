@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navmenu = document.querySelector('.nav-menu');
 
     function displayMenu() {
+        // change les classes css pour rendre les éléments visibles ou non
         burgerCloseIcon.classList.toggle('hidden');
         burgerOpenIcon.classList.toggle('hidden');
         overlayMenu.classList.toggle('show');
