@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: false,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         coverflowEffect: {
             rotate: 0,
@@ -54,6 +54,16 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
         autoplay: {
             delay: 2000,
+          },
+          breakpoints: {  
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              }
           },
     });
 });
