@@ -1,8 +1,6 @@
 /* ---------- FADE IN AU SCROLL DES TITRES ---------- */
 let titles = document.querySelectorAll('h2');
 
-document.addEventListener('scroll', fadeIn);
-
 function fadeIn() {
     titles.forEach(title => {
         // variable pour obtenir les dimensions et la position du titre par raport à la fenêtre de visualisation
@@ -17,7 +15,7 @@ function fadeIn() {
         }
     });
 }
-document.addEventListener('DOMContentLoaded', fadeIn);
+document.addEventListener('scroll', fadeIn);
 /* ---------- FIN DE FADE IN AU SCROLL DES TITRES ---------- */
 
 /* ---------- PARALLAX HERO HEADER ---------- */
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 120,
               }
           },
     });
@@ -74,23 +72,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const cloudsContainer = document.querySelector('.clouds');
     const clouds = document.querySelectorAll('.cloud');
 
+    // vérifie si le conteneur est visible
     function isInView() {
-        // variable pour obtenir les dimensions et la position du conteneur par raport à la fenêtre de visualisation
         const rect = cloudsContainer.getBoundingClientRect();
-        // vérifie si le conteneur est visible : si le haut du conteneur est inferieur ou égal à la hauteur de la fenetre,
-        // et que le bas du conteneur est supérieur ou égal à 0, c'est qu'il est dans la fenêtre du navigateur
         return rect.top <= window.innerHeight && rect.bottom >= 0;
     }
 
     function parallaxScroll() {
         if (isInView()) {
             const scrollPosition = window.scrollY;
-            // position du conteneur par rapport au haut de la page
             const containerOffset = cloudsContainer.offsetTop;
-            // hauteur du conteneur
             const containerHeight = cloudsContainer.offsetHeight;
             // scroll% = distance entre la position actuelle du scroll et le haut du conteneur / la hauteur du conteneur = la portion scrollée de la hauteur du conteneur
-            // 200px - 50px / 800px = 0,18% scrollé
             const scrollPercent = (scrollPosition - containerOffset) / containerHeight;
 
             // translatex sur chaque nuage
